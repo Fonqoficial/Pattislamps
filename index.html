@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <title>Patti's Lamps - Ilumina tu Hogar con Estilo</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -40,21 +40,26 @@
 </div>
 </section>
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Ilumina tu hogar con <span class="highlight">estilo único</span></h1>
-                <p>Descubre nuestra colección exclusiva de lámparas diseñadas para transformar cada rincón de tu espacio en algo extraordinario.</p>
-                <div class="cta-buttons">
-                    <a href="#productos" class="btn btn-primary">Ver Colección</a>
-                    <a href="#contacto" class="btn btn-secondary">Contactar</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&h=800&fit=crop" alt="Lámpara elegante">
-            </div>
-        </div>
-    </section>
+    <section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Ilumina tu hogar con <span class="highlight">estilo único</span></h1>
+      <p>Descubre nuestra colección exclusiva de lámparas diseñadas para transformar cada rincón de tu espacio en algo extraordinario.</p>
+      <div class="cta-buttons">
+        <a href="#productos" class="btn btn-primary">Ver Colección</a>
+        <a href="#contacto" class="btn btn-secondary">Contactar</a>
+      </div>
+    </div>
+
+    <!-- 🔽 Aquí el video -->
+    <div class="hero-image">
+      <video autoplay muted loop playsinline>
+        <source src="VIDEO2.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+  </div>
+</section>
 
     <!-- Features -->
     <section class="features">
@@ -86,31 +91,39 @@
     <section class="categories-banner">
 
     </section>
+<!-- Products Section -->
+<section class="products" id="productos">
+    <div class="section-header">
+        <h2>Encuentra tu Lámpara Ideal</h2>
+        <p>Cada lámpara ha sido seleccionada para crear ambientes únicos. Desde minimalismo nórdico hasta elegancia industrial</p>
+    </div>
+    <div class="products-grid">
+    </div>
+</section>
+<!-- Nuevas subsecciones de productos -->
+<div class="product-categories">
+    <div class="category">
+        <a href="formas.html">
+            <h3>FORMAS</h3>
+            <p>Explora lámparas con diseños geométricos, curvas suaves y estructuras únicas.</p>
+        </a>
+    </div>
 
-    <!-- Products Section -->
-    <section class="products" id="productos">
-        <div class="section-header">
-            <h2>Encuentra tu Lámpara Ideal</h2>
-            <p>Cada lámpara ha sido seleccionada para crear ambientes únicos. Desde minimalismo nórdico hasta elegancia industrial</p>
-        </div>
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&h=600&fit=crop" alt="Lámpara de Mesa Vintage">
-                </div>
-                <div class="product-info">
-                    <span class="product-category">Mesa</span>
-                    <h3>Lámpara de Mesa Vintage</h3>
-                    <p>Estilo retro con base de madera natural y pantalla de lino. Ambiente cálido garantizado.</p>
-                    <div class="product-footer">
-                        <span class="product-price">65€</span>
-                        <button class="product-btn" onclick="contactProduct('Lámpara de Mesa Vintage')">Consultar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact -->
+    <div class="category">
+        <a href="metalica.html">
+            <h3>METÁLICA</h3>
+            <p>Lámparas modernas y elegantes con acabados metálicos y detalles industriales.</p>
+        </a>
+    </div>
+
+    <div class="category">
+        <a href="papel.html">
+            <h3>PAPEL</h3>
+            <p>Diseños ligeros y cálidos hechos en papel o materiales translúcidos.</p>
+        </a>
+    </div>
+</div>
+    <!-- Contacto -->
     <section class="contact" id="contacto">
         <div class="section-header">
             <h2>Contáctanos</h2>
@@ -123,14 +136,14 @@
                     <div class="contact-icon">📍</div>
                     <div>
                         <h4>Dirección</h4>
-                        <p>Sevilla La isla, España</p>
+                        <p>Sevilla, España</p>
                     </div>
                 </div>
                 <div class="contact-method">
                     <div class="contact-icon">📧</div>
                     <div>
                         <h4>Email</h4>
-                        <p>info@pattislamps.com</p>
+                        <p>pattislamps@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-method">
@@ -193,4 +206,19 @@
     <!-- WhatsApp Floating -->
     <a href="https://wa.me/34600123456" target="_blank" class="whatsapp-float">💬</a>
 </body>
+<script>
+function openCollection(collection) {
+  switch(collection) {
+    case 'formas':
+      window.location.href = 'formas.html';
+      break;
+    case 'metalica':
+      window.location.href = 'metalica.html';
+      break;
+    case 'papel':
+      window.location.href = 'papel.html';
+      break;
+  }
+}
+</script>
 </html>

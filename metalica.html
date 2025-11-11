@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patti's Lamps - METÁLICA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Patti's Lamps">
+      <span>PATTI'S LAMPS</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#productos">Productos</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="gallery">
+  <div class="section-header">
+    <h2>METÁLICA</h2>
+    <p>Lámparas modernas y elegantes con acabados metálicos e industriales.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <!-- Producto 1: LUMINA -->
+    <div class="gallery-item">
+      <a href="metalica-lumina.html">
+        <img src="https://images.unsplash.com/photo-1616627783190-ef0f8fbd0a52?w=600&h=600&fit=crop" alt="LUMINA">
+        <h3>LUMINA</h3>
+      </a>
+    </div>
+
+    <!-- Producto 2: AERO -->
+    <div class="gallery-item">
+      <a href="metalica-aero.html">
+        <img src="https://images.unsplash.com/photo-1582719478148-9ff3b996020b?w=600&h=600&fit=crop" alt="AERO">
+        <h3>AERO</h3>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Modal -->
+<div id="lampModal" class="modal">
+  <div class="modal-inner">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-img" src="" alt="">
+    <div class="modal-content">
+      <h2 id="modalName"></h2>
+      <p id="modalDescription"></p>
+      <span id="modalPrice"></span>
+      <br>
+      <a href="mailto:info@pattislamps.com?subject=Consulta%20Lámpara" class="modal-btn">Consultar / Comprar</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(element) {
+  const modal = document.getElementById('lampModal');
+  const img = element.querySelector('img').src;
+  const name = element.getAttribute('data-name');
+  const description = element.getAttribute('data-description');
+  const price = element.getAttribute('data-price');
+
+  document.querySelector('.modal-img').src = img;
+  document.getElementById('modalName').innerText = name;
+  document.getElementById('modalDescription').innerText = description;
+  document.getElementById('modalPrice').innerText = price;
+
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('lampModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('lampModal');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
